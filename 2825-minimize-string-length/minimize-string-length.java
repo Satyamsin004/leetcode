@@ -1,16 +1,11 @@
 class Solution {
     public int minimizedStringLength(String s) {
-
-        Stack<Character> st = new Stack<>();
-
-        for (int i = 0; i < s.length(); i++) {
+        int n = s.length();
+        HashSet<Character> ans = new HashSet<>();
+        for(int i = 0;i<n;i++){
             char ch = s.charAt(i);
-
-            if (!st.contains(ch)) {
-                st.push(ch);
-            }
+            ans.add(ch);
         }
-
-        return st.size();
+        return ans.size();
     }
 }
