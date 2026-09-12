@@ -16,25 +16,22 @@ class Solution {
             size++;
             temp = temp.next;
         }
-        int[] arr = new int[size];
-        temp = head;
-        int i = 0;
-        while (temp != null) {
-            arr[i] = temp.val;
-            i++;
-            temp = temp.next;
-        }
-        int tempo = arr[k - 1];
-        arr[k - 1] = arr[size - k];
-        arr[size - k] = tempo;
+        ListNode first = head;
+        for(int i = 1; i<k;i++){
+            first = first.next;
 
-        ListNode headd = new ListNode(arr[0]);
-        ListNode temporary = headd;
-        for (int j = 1; j < arr.length; j++) {
-            temporary.next = new ListNode(arr[j]);
-            temporary = temporary.next;
         }
-        return headd;
+        ListNode second = head;
+        for(int i = 1 ;i <= size-k;i++){
+            second = second.next;
+        }
+
+        int value = first.val;
+        first.val = second.val;
+        second.val = value;
+        
+        
+        return head;
 
     }
 }
