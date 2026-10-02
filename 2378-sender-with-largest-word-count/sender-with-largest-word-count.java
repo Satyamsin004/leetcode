@@ -5,7 +5,8 @@ class Solution {
         HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
             int count = 1;
-            for (int j = 0; j < messages[i].length(); j++) {
+            for (int j = 0; j < messages[i].length(); j++) { 
+           // int words = messages[i].split(" ").length;
                 if (messages[i].charAt(j) == ' ') {
                     count++;
                 }
