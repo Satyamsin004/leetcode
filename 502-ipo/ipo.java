@@ -7,7 +7,7 @@ class Solution {
         projects.sort((a,b) -> a[0] - b[0]);
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         int i = 0;
-        while( k != 0){
+        while( k > 0){
             while( i < projects.size() && projects.get(i)[0] <= w){
                 pq.add(projects.get(i)[1]);
                 i++;
