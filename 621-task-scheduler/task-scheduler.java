@@ -8,8 +8,7 @@ class Solution {
             map.put(tasks[i], map.getOrDefault(tasks[i], 0) + 1);
         }
 
-        PriorityQueue<Integer> pq =
-            new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
         pq.addAll(map.values());
 
