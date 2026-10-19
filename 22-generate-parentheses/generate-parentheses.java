@@ -8,6 +8,7 @@ class Solution {
     public void backtrack(List<String> ans, StringBuilder cur,int open,int close,int n){
         if(cur.length() == 2*n){
             ans.add(cur.toString());
+            return;
         }
         if(open < n){
             cur.append('(');
